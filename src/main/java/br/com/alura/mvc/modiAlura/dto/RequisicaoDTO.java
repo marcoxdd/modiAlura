@@ -1,5 +1,7 @@
 package br.com.alura.mvc.modiAlura.dto;
 
+import br.com.alura.mvc.modiAlura.entitie.Pedido;
+
 public class RequisicaoDTO {
     private String nomeProduto;
     private String urlProduto;
@@ -36,5 +38,14 @@ public class RequisicaoDTO {
 
     public void setDescProduto(String descProduto) {
         this.descProduto = descProduto;
+    }
+
+    public Pedido toPedido(){
+        Pedido pedido = new Pedido();
+        pedido.setUrlProduto(urlProduto);
+        pedido.setNome(nomeProduto);
+        pedido.setUrlImagem(imgProduto);
+        pedido.setDescricao(descProduto);
+        return pedido;
     }
 }
