@@ -2,6 +2,7 @@ package br.com.alura.mvc.modiAlura.Services;
 
 import br.com.alura.mvc.modiAlura.dto.RequisicaoDTO;
 import br.com.alura.mvc.modiAlura.entitie.Pedido;
+import br.com.alura.mvc.modiAlura.entitie.StatusPedido;
 import br.com.alura.mvc.modiAlura.repository.PedidoRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -19,6 +20,10 @@ public class CrudPedidoService {
 
     public List<Pedido> recuperaPedidos(){
         return (List<Pedido>) pedidoRepository.findAll();
+    }
+
+    public List<Pedido> recuperaPedidosStatus(StatusPedido status){
+        return (List<Pedido>) pedidoRepository.findByStatusPedido(status);
     }
 
 }
