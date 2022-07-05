@@ -1,7 +1,7 @@
 package br.com.alura.mvc.modiAlura.dto;
 
 import br.com.alura.mvc.modiAlura.entitie.Pedido;
-import br.com.alura.mvc.modiAlura.entitie.StatusPedido;
+import br.com.alura.mvc.modiAlura.utils.enums.StatusPedido;
 
 import javax.validation.constraints.NotBlank;
 

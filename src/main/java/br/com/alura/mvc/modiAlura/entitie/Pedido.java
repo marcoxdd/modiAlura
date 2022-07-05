@@ -1,5 +1,7 @@
 package br.com.alura.mvc.modiAlura.entitie;
 
+import br.com.alura.mvc.modiAlura.utils.enums.StatusPedido;
+
 import javax.persistence.*;
 import java.time.LocalDate;
 @Entity
